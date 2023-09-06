@@ -6,9 +6,15 @@ namespace DesignPattern.Creational.FactoryMethod
         public abstract IConnectionString ConnectDatabase();
 
         public static DatabaseConnectivity GetFactory(FactoryType factoryType) {
-            switch(factoryType) {
-                when
+            DatabaseConnectivity db = null;
+            if(factoryType == FactoryType.Aurora) {
+                db = new AuroraConnectivity();
+            } else if(factoryType == FactoryType.MsSQL) {
+                db = new MsSqlConnectivity();
+            } else {
+                db = null;
             }
+            return db;
         }
     }
 
@@ -18,8 +24,14 @@ namespace DesignPattern.Creational.FactoryMethod
         }
     }
 
+    class MsSqlConnectivity : DatabaseConnectivity {
+        public override IConnectionString ConnectDatabase() {
+            return new MsSqlConnectionString();
+        }
+    }
+
     public enum FactoryType {
         Aurora,
-        Snowflake
-    }
+        MsSQL
+    };
 }
