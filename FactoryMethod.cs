@@ -6,7 +6,7 @@ namespace DesignPattern.Creational.FactoryMethod
         public abstract IConnectionString ConnectDatabase();
 
         public static DatabaseConnectivity GetFactory(FactoryType factoryType) {
-            DatabaseConnectivity db = null;
+            DatabaseConnectivity db;
             if(factoryType == FactoryType.Aurora) {
                 db = new AuroraConnectivity();
             } else if(factoryType == FactoryType.MsSQL) {

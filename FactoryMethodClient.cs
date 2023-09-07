@@ -4,7 +4,7 @@ namespace DesignPattern.Creational.FactoryMethod.Client
 {
     public class FactoryMethodClient {
         public FactoryMethodClient() {
-            DatabaseConnectivity aurora = DatabaseConnectivity.GetFactory(FactoryType.Aurora);
+            DatabaseConnectivity aurora = DatabaseConnectivity.GetFactory(FactoryType.MsSQL);
             IConnectionString connectionString = aurora.ConnectDatabase();
             Console.WriteLine($"{connectionString.GetConnectionString()}");
         }

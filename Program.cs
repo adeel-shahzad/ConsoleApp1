@@ -1,6 +1,3 @@
-﻿// using System;
-using DesignPattern.Creational.FactoryMethod.Client;
+﻿using DesignPattern.Creational.FactoryMethod.Client;
 
-// Console.WriteLine(guid);
-
-new FactoryMethodClient();
+Console.WriteLine(new FactoryMethodClient());
