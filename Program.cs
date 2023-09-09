@@ -1,3 +1,5 @@
 ﻿using DesignPattern.Creational.FactoryMethod.Client;
+using DesignPattern.Creational.AbstractFactory.Client;
 
-Console.WriteLine(new FactoryMethodClient());
+new FactoryMethodClient();
+new AbstractFactoryClient();
