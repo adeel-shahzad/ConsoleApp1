@@ -7,9 +7,11 @@ using DesignPattern.Creational.Prototype;
 
 new FactoryMethodClient();
 new AbstractFactoryClient();
-new BuilderClient();
 
 new DateTimeFormatTest();
 new DateTimeUtcTest();
+
+new PrototypeClient();
+new BuilderClient();
 
 new PrototypeClient();
